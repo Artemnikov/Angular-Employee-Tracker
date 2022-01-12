@@ -1,0 +1,33 @@
+{
+  "employees": [
+    {
+      "id": 323322321,
+      "fname": "Artem",
+      "lname": "Meshkov",
+      "dateofbirth": "08/06/1999",
+      "salary": 5000,
+      "email": "sartem.meshkov@gmail.com",
+      "topEmployee": true
+    },
+    {
+      "id": 538438975,
+      "fname": "Abrams",
+      "lname": "Bradley",
+      "dateofbirth": "15/12/1985",
+      "salary": 10000,
+      "email": "adams.bradley@gmail.com",
+      "topEmployee": false
+    },
+    {
+      "id": 531478963,
+      "fname": "Morris",
+      "lname": "Frenchart",
+      "dateofbirth": "28/05/1992",
+      "salary": 15000,
+      "email": "morris.Frenchart@gmail.com",
+      "topEmployee": true
+    }
+  ],
+  "messages": [
+  ]
+}

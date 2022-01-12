@@ -1,0 +1,22 @@
+<form (ngSubmit)="onCLick()">
+
+    <label for="id">identification number</label>
+    <input [(ngModel)]="newEmployee.id" type="number" name="id" required>
+
+    <label for="fname">Firstname</label>
+    <input [(ngModel)]="newEmployee.fname" placeholder="Firstname" name="fname" required>
+
+    <label for="lname">Lastname</label>
+    <input [(ngModel)]="newEmployee.lname" placeholder="Lastname" name="lname" required>
+
+    <label for="dateOfBirth">Date of birth</label>
+    <input [(ngModel)]="newEmployee.dateofbirth" placeholder="date Of Birth" name="dateOfBirth" required>
+
+    <label for="email">Email</label>
+    <input [(ngModel)]="newEmployee.email" placeholder="Email" name="email" required>
+
+    <label for="salary">Salary</label>
+    <input type="number" [(ngModel)]="newEmployee.salary" placeholder="Salary" name="salary" required>
+
+    <button (click)="onCLick()" class="btn" >Add</button>
+</form>

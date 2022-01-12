@@ -1,0 +1,34 @@
+<div class="container">
+    <form>
+        <div class="info">
+            <h3>{{employee.fname | uppercase}} {{employee.lname | uppercase}}</h3>
+            <p>id: {{employee.id}} </p>
+            <p>Date of birth: {{employee.dateofbirth}}</p>
+        </div>
+        <label for="fname">Firstname: </label>
+        <input [(ngModel)]="employee.fname" placeholder="fname" name="fname">
+
+        <label for="lname">Lastname: </label>
+        <input [(ngModel)]="employee.lname" placeholder="lname" name="lname">
+
+        <label for="email">Email:</label>
+        <input [(ngModel)]="employee.email" placeholder="email" name="email">
+
+        <label for="salary">Salary</label>
+        <input [(ngModel)]="employee.salary" placeholder="salary" name="salary">
+
+
+        <div class="btn_container">
+            <label for="topEmployee">Top Employee?</label>
+            <input class="checkbox" (click)="topEmployee(employee)" type="checkbox" name="topEmployee">
+            <button class="btn" (click)="endEditEmployee()">Save</button>
+            <button class="btn" (click)="createMessage()">Send Message</button>
+        </div>
+        <app-sendmail (endEmail)="createMessage()" *ngIf="status" [employee]=employee></app-sendmail>
+    </form>
+    <h1>Messages</h1>
+    <div class="messages" *ngFor="let email of emails">
+        <h2>{{email.subject}}</h2>
+        <p>{{email.message}}</p>
+    </div>
+</div>
